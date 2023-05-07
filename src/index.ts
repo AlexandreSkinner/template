@@ -1,2 +1,6 @@
-console.log('Hellow Word !!');
-console.log('Skinner');
+class Person {
+  sayName (): string {
+    return 'Skinner';
+  }
+}
+export default Person;
