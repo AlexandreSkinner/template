@@ -17,5 +17,8 @@
     "rules": {
         "@typescript-eslint/semi": "off",
         "semi": [2, "always"]
-    }
+    },
+    "include": [
+      "jest.config.js"
+    ]
 }
