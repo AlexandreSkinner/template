@@ -1,8 +1,3 @@
-/*
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
 module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
@@ -12,8 +7,14 @@ module.exports = {
     '.+\\.ts$': 'ts-jest'
   },
   moduleNameMapper: {
-    '@/(.*)': '<rootDir>/src/$1'
+    '@/(.*)': '<rootDir>/src/$1',
+    '@/test/(.+)': '<rootDir>/test/$1',
   },
   clearMocks: true,
-  coverageProvider: 'v8'
+  coverageProvider: 'v8',
+  testMatch: ['**/*.spec.ts'],
+  roots: [
+    '<rootDir>/src',
+    '<rootDir>/test'
+  ],
 };
