@@ -31,7 +31,7 @@ Esta biblioteca é responsavel por padronizar as mensagens dos nossos commit. Se
 ~/projeto/compras
 » npm i -D git-commit-msg-linter
 ```
-# Instalar o typescript
+# Instalar o Typescript
 Instala o compilador da linguagem de programação Typescript e os types para adicionar tipagem ao node, ajudando o intellisence dos comandos
 
 ```
@@ -46,7 +46,7 @@ Instala o compilador da linguagem de programação Typescript e os types para ad
 ```
 Como o typescript foi instalado como dependencia de desenvolvimento temos que utilizar o comando *npx* para executar o compilador *tsc*
 
-# Arquivo de configuração do typescript (tsconfig.json)
+# Arquivo de configuração do Typescript (tsconfig.json)
 ```
 {
   "compilerOptions": {
@@ -80,7 +80,7 @@ Realiza a instalação do eslint bem como a configuração do mesmo.
 npm install --save-dev eslint eslint-plugin-stanrd eslint-pluging-promise eslint-plugin-import eslint-plugin-node @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
   ## Inicializando o eslint
-  O eslint serve para pontuar erros de sintaxe e formatar o código fonte que estiver fora da especificação standaed javascript style.
+  O eslint serve para pontuar erros de sintaxe e formatar o código fonte que estiver fora da especificação standard javascript style.
 ```
   ~/projeto/compras
   » npm init @eslint/config
@@ -115,24 +115,15 @@ Abaixo temos um exemplo do arquivo de configuração do eslint **.eslintrc.json*
     ]
 }
 ```
-# Arquivo do lintstaged (lintstagedrc.json)
-```
-{
-  "*.ts": [
-    "eslint 'src/**' --fix",
-    "npm run test:staged"
-  ]
-}
-```
 # Instalando o husky
   Permite utilizarmos os hook do git para garantir que não iremos commitar código fora das
-  diretrizes parametrizadas no eslint e que não estiver passando no tete de unit do jest
+  diretrizes parametrizadas no eslint e que não estiver passando no teste de unit do jest
 ```
     ~/projeto/compras
     » npm install husky -D
     » npm install -D lint-staged
 ```
-  A biblioteca lint-stage determina que o lint e jest atuem apenas nos arquivos na stage area do git
+  A biblioteca lint-stage determina que o lint e jest atuem apenas nos arquivos na staged area do git
 
     O primeiro comando instala o husky, criando a pasta de mesmo nome.
     O segundo comando cria arquivo de pre-commit com o comando que está entre aspas dentro dele.
@@ -141,6 +132,15 @@ Abaixo temos um exemplo do arquivo de configuração do eslint **.eslintrc.json*
     ~/projeto/compras
     » npx husky install
     » npx husky add .husky/pre-commit "npx lint-staged"
+```
+# Arquivo do lintstaged (lintstagedrc.json)
+```
+{
+  "*.ts": [
+    "eslint 'src/**' --fix",
+    "npm run test:staged"
+  ]
+}
 ```
 # Instalando o Jest.
   Instala o Jest, a biblioteca de tipos para o typescript. Instala também
@@ -219,3 +219,5 @@ module.exports = {
    "test:coverage": "npm test -- --coverage"
 }
 ```
+# videos do YouTube de referencia
+https://www.youtube.com/watch?v=RO3l_xy7GeM
