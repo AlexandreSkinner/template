@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
     "incremental": true,
-    "target": "es2016",
-    "module": "commonjs",
+//    "target": "es2016",
+//    "module": "commonjs",
+    "target": "ESNEXT",
+    "module": "ESNEXT",
+    "esModuleInterop": true,
     "rootDirs": ["src","test"],
     "outDir": "./dist",
     "moduleResolution": "node",
