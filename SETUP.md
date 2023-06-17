@@ -46,7 +46,7 @@ Instala o compilador da linguagem de programação Typescript e os types para ad
 ```
 Como o typescript foi instalado como dependencia de desenvolvimento temos que utilizar o comando *npx* para executar o compilador *tsc*
 
-# Arquivo de configuração do Typescript (tsconfig.json)
+## Arquivo de configuração do Typescript (tsconfig.json)
 ```
 {
   "compilerOptions": {
@@ -70,7 +70,7 @@ Como o typescript foi instalado como dependencia de desenvolvimento temos que ut
 ```
 
 # Instalando o ESLINT
-Realiza a instalação do eslint bem como a configuração do mesmo.
+Realiza a instalação do eslint, bem como configura o padrão da sintaxe do typescript tendo por base as regras definidas no style standard-with-typescript.
 ```
   ~/projeto/compras
   » npm i --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint eslint-plugin-node
@@ -88,7 +88,7 @@ npm install --save-dev eslint eslint-plugin-stanrd eslint-pluging-promise eslint
 ```
 Abaixo temos um exemplo do arquivo de configuração do eslint **.eslintrc.json**
 
-# Arquivo de configuração do lint (.eslintrc.json)
+## Arquivo de configuração do lint (.eslintrc.json)
 ```
 {
     "env": {
@@ -117,13 +117,13 @@ Abaixo temos um exemplo do arquivo de configuração do eslint **.eslintrc.json*
 ```
 # Instalando o husky
   Permite utilizarmos os hook do git para garantir que não iremos commitar código fora das
-  diretrizes parametrizadas no eslint e que não estiver passando no teste de unit do jest
+  diretrizes parametrizadas no eslint e que não estiverem passando no teste de unit do jest
 ```
     ~/projeto/compras
     » npm install husky -D
     » npm install -D lint-staged
 ```
-  A biblioteca lint-stage determina que o lint e jest atuem apenas nos arquivos na staged area do git
+  A biblioteca lint-stage determina que o lint e jest atuem apenas nos arquivos na staged area do git.
 
     O primeiro comando instala o husky, criando a pasta de mesmo nome.
     O segundo comando cria arquivo de pre-commit com o comando que está entre aspas dentro dele.
@@ -133,7 +133,7 @@ Abaixo temos um exemplo do arquivo de configuração do eslint **.eslintrc.json*
     » npx husky install
     » npx husky add .husky/pre-commit "npx lint-staged"
 ```
-# Arquivo do lintstaged (lintstagedrc.json)
+## Arquivo do lintstaged (lintstagedrc.json)
 ```
 {
   "*.ts": [
@@ -160,7 +160,7 @@ Abaixo temos um exemplo do arquivo de configuração do eslint **.eslintrc.json*
 ```
 Abaixo temos um exemplo de arquivo de configuração do jest
 
-# Arquivo de configuracao do Jest (jest.config.js)
+## Arquivo de configuração do Jest (jest.config.js)
 ```
 module.exports = {
   roots: ['<rootDir>/src'],
@@ -210,7 +210,7 @@ module.exports = {
   }
 }
 ```
-# script para execucao do Jest
+## Script para execucao do Jest
 ```
 "scripts": {
    "test": "jest --passWithNoTests --runInBand --no-cache",
@@ -219,5 +219,5 @@ module.exports = {
    "test:coverage": "npm test -- --coverage"
 }
 ```
-# videos do YouTube de referencia
+# Videos do YouTube de referencia
 https://www.youtube.com/watch?v=RO3l_xy7GeM
