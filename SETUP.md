@@ -1,5 +1,5 @@
 # Criar a pasta da aplicação.
-Cria a pasta do Projeto como subpasta de **projeto**.
+Cria a pasta do Projeto como uma subpasta de **projeto**.
 
 ```
 ~/projeto
@@ -8,7 +8,7 @@ Cria a pasta do Projeto como subpasta de **projeto**.
 compras on  master [?]
 ```
 # Inicializar o GIT
-Este comando inicia o controle de versão do código fonte
+Este comando inicia o controle de versão do código fonte em repositório local
 
 ```
 ~/projeto/compras
@@ -23,7 +23,7 @@ Este comando inicia o controle de versão do código fonte
 » npm init -y
 ```
 # Instalar biblioteca git-commit-msg-linter
-Esta biblioteca é responsavel por padronizar as mensagens dos nossos commit. Segue o padrão do conventional commit, bloqueado commit que não estiverem em conformidade com este padrão.
+Esta biblioteca é responsavel por padronizar as mensagens dos nossos commit. Segue o padrão do conventional commit, bloqueando commit que não estiverem em conformidade com este padrão.
  _"Conventional Commit"_.
   [Site conventional commit](https://www.conventionalcommits.org/en/v1.0.0/)
 
@@ -32,7 +32,7 @@ Esta biblioteca é responsavel por padronizar as mensagens dos nossos commit. Se
 » npm i -D git-commit-msg-linter
 ```
 # Instalar o Typescript
-Instala o compilador da linguagem de programação Typescript e os types para adicionar tipagem ao node, ajudando o intellisence dos comandos
+Instala o compilador da linguagem de programação Typescript e os types do *node* que adicina tipagem ao mesmo, ajudando no intellisence dos comandos
 
 ```
 ~/projeto/compras
@@ -44,21 +44,25 @@ Instala o compilador da linguagem de programação Typescript e os types para ad
   ~/projeto/compras
   » npx tsc --init
 ```
-Como o typescript foi instalado como dependencia de desenvolvimento temos que utilizar o comando *npx* para executar o compilador *tsc*
+Como o typescript foi instalado como dependencia de desenvolvimento temos que utilizar o comando **npx** para executar o compilador **tsc**
 
 ## Arquivo de configuração do Typescript (tsconfig.json)
+
+Este arquivo é inspecionado pelo typescript no momento da compilação
 ```
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "es2016",
-    "module": "commonjs",
-    "rootDirs": ["src","test"],
-    "outDir": "./dist",
-    "moduleResolution": "node",
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "incremental": true,                       // Compilação incremental
+    "target": "es2016",                        // Versão do javascript gerada pelo tsc
+    "module": "commonjs",                      // Para rodar sobre node
+    "sourceMap": true,                         // Mapeia código js p/ ts (viabiliza debug em TS)
+    "removeComments": true,                    // Remove comentários
+    "rootDirs": ["src","test"],                //
+    "outDir": "./dist",                        // Armazena o código javascript (build)
+    "moduleResolution": "node",                //
+    "strict": true,                            //
+    "skipLibCheck": true,                      //
+    "forceConsistentCasingInFileNames": true,  //
     "paths": {
       "@/*": ["*"],
       "@/test/*": ["../test/*"]
@@ -123,7 +127,7 @@ Abaixo temos um exemplo do arquivo de configuração do eslint **.eslintrc.json*
     » npm install husky -D
     » npm install -D lint-staged
 ```
-  A biblioteca lint-stage determina que o lint e jest atuem apenas nos arquivos na staged area do git.
+  A biblioteca lint-stage determina que o lint e jest atuem apenas nos arquivos que se encontram na staged area do git.
 
     O primeiro comando instala o husky, criando a pasta de mesmo nome.
     O segundo comando cria arquivo de pre-commit com o comando que está entre aspas dentro dele.
@@ -210,7 +214,7 @@ module.exports = {
   }
 }
 ```
-## Script para execucao do Jest
+## Script para execução do Jest
 ```
 "scripts": {
    "test": "jest --passWithNoTests --runInBand --no-cache",
