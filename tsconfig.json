@@ -5,6 +5,8 @@
 //    "module": "commonjs",
     "target": "ESNEXT",
     "module": "ESNEXT",
+    "sourceMap": true,
+    "removeComments": true,
     "esModuleInterop": true,
     "rootDirs": ["src","test"],
     "outDir": "./dist",
