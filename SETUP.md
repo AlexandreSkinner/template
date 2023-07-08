@@ -223,5 +223,37 @@ module.exports = {
    "test:coverage": "npm test -- --coverage"
 }
 ```
+# Prepara o buid
+Para que o código javascript gerado na compilação tenha a capacida de resolver os import do tipo '@/index'
+é necessário instalas duas bibliotecas como dependencia de desenvolvimento.
+
+```
+  ~/projeto/compras
+  » npm i tsc-alias tsconfig-paths -D
+```
+Além disso precisamos editar o script build no arquivo package.json
+
+```
+"build": "tsc -p tsconfig-build.json && tsc-alias"
+```
+
+## Arquivo tsconfig-build
+Este arquivo tem por objetivo impedir que os códigos
+da pasta **test** não sejam buildados (convertidos para javascript).
+
+```
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["test"]
+}
+```
+
+Para isso basta compilar passando o parametro abaixo
+
+```
+tsc -p tsconfig-build.json
+```
+##
+
 # Videos do YouTube de referencia
 https://www.youtube.com/watch?v=RO3l_xy7GeM
