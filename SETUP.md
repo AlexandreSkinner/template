@@ -239,7 +239,7 @@ Além disso precisamos editar o script build no arquivo package.json
 
 ## Arquivo tsconfig-build
 Este arquivo tem por objetivo impedir que os códigos
-da pasta **test** não sejam buildados (convertidos para javascript).
+da pasta **test** sejam buildados (convertidos para javascript).
 
 ```
 {
