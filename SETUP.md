@@ -234,12 +234,14 @@ Para que o código javascript gerado na compilação tenha a capacida de resolve
 Além disso precisamos editar o script build no arquivo package.json
 
 ```
-"build": "tsc -p tsconfig-build.json && tsc-alias"
+"scripts": {
+  "build": "tsc -p tsconfig-build.json && tsc-alias"
+}
 ```
 
 ## Arquivo tsconfig-build
 Este arquivo tem por objetivo impedir que os códigos
-da pasta **test** sejam buildados (convertidos para javascript).
+da pasta **test** sejam buildados (transpilados para javascript).
 
 ```
 {
@@ -248,7 +250,7 @@ da pasta **test** sejam buildados (convertidos para javascript).
 }
 ```
 
-Para isso basta compilar passando o parametro abaixo
+Para isso temos que passando o parâmetro abaixo, no script de buid
 
 ```
 tsc -p tsconfig-build.json
