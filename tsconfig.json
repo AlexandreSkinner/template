@@ -2,9 +2,7 @@
   "compilerOptions": {
     "incremental": true,
     "target": "es2022",
-    "module": "CommonJS",
-//    "target": "ESNEXT",
-//    "module": "ESNEXT",
+    "module": "ESNext",
     "sourceMap": true,
     "removeComments": true,
     "esModuleInterop": true,
