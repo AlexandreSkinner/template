@@ -52,17 +52,18 @@ Este arquivo é inspecionado pelo typescript no momento da compilação
 ```
 {
   "compilerOptions": {
-    "incremental": true,                       // Compilação incremental
-    "target": "es2016",                        // Versão do javascript gerada pelo tsc
-    "module": "commonjs",                      // Para rodar sobre node
-    "sourceMap": true,                         // Mapeia código js p/ ts (viabiliza debug em TS)
-    "removeComments": true,                    // Remove comentários
-    "rootDirs": ["src","test"],                //
-    "outDir": "./dist",                        // Armazena o código javascript (build)
-    "moduleResolution": "node",                //
-    "strict": true,                            //
-    "skipLibCheck": true,                      //
-    "forceConsistentCasingInFileNames": true,  //
+    "incremental": true,                        // Compilação incremental
+    "target": "es2022",                         // Versão do javascript gerada na transpilação
+    "module": "ESNext",                         // Tipo do modulo
+    "sourceMap": true,                          // Mapeia código js p/ ts (viabiliza debug no TS)
+    "removeComments": true,                     // Remove comentários
+    "esModuleInterop": true,                    // Premite interoperabilidade entre js e ts
+    "rootDirs": ["src","test"],                 //
+    "outDir": "./dist",                         // Armazena o código javascript (build)
+    "moduleResolution": "node",                 //
+    "strict": true,                             //
+    "skipLibCheck": true,                       // Não realizar check de sintaxe em lib de terceiros
+    "forceConsistentCasingInFileNames": true,   //
     "paths": {
       "@/*": ["*"],
       "@/test/*": ["../test/*"]
