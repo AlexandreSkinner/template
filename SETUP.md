@@ -148,9 +148,10 @@ Abaixo temos um exemplo do arquivo de configuração do eslint **.eslintrc.json*
 }
 ```
 # Instalando o Jest.
-  Instala o Jest, a biblioteca de tipos para o typescript. Instala também
-  o ts-jest porque o jest com typescript necessita trabalhar em conjunto com o ts-node
+  Instala o Jest, a biblioteca de tipos para o typescript. Instala também o ts-jest.
 
+  O ts-jest é um transformador Jest com suporte a mapa de origem que permite usar Jest para testar projetos escritos em TypeScript.
+  Ele oferece suporte a todos os recursos do TypeScript, incluindo verificação de tipo
 ```
   ~/projeto/compras
   » npm i jest -D
@@ -158,6 +159,8 @@ Abaixo temos um exemplo do arquivo de configuração do eslint **.eslintrc.json*
   » npm i ts-jest -D
 ```
   ## Inicializando o jest.
+  Por padrão, o Jest pode ser executado sem nenhum arquivo de configuração, mas não compilará .ts arquivos. Para fazer a transpilação do TypeScript com ts-jest, precisaremos criar um arquivo de configuração que dirá ao Jest para usar uma ts-jestpredefinição.
+
   A inicialização do Jest cria um arquivo de configuração **jest.config.js**
 ```
     ~/projeto/compras
@@ -260,3 +263,5 @@ tsc -p tsconfig-build.json
 
 # Videos do YouTube de referencia
 https://www.youtube.com/watch?v=RO3l_xy7GeM
+
+https://kulshekhar.github.io/ts-jest/docs/getting-started/presets
