@@ -259,8 +259,11 @@ Para isso temos que passando o parâmetro abaixo, no script de buid
 ```
 tsc -p tsconfig-build.json
 ```
-##
-
+## Repositório remoto
+```
+origin  git@github.com:AlexandreSkinner/template.git (fetch)
+origin  git@github.com:AlexandreSkinner/template.git (push)
+```
 # Videos do YouTube de referencia
 https://www.youtube.com/watch?v=RO3l_xy7GeM
 
